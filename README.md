@@ -1,2 +1,2 @@
-# dotfile
+# dotfiles
 :pencil: my dotfiles.
