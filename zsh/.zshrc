@@ -5,7 +5,9 @@ export ZSH=~/.dotfiles/oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="Honukai"
+#ZSH_THEME="Honukai"
+# ZSH_THEME="dracula"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,8 +55,14 @@ plugins=(git)
 
 # User configuration
 
-export PATH=$PATH:"/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Marmalade.app/Contents/s3e/bin"
+export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Marmalade.app/Contents/s3e/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
+export PATH=$PATH:"/Users/renanmuniz/Dev/libs/learnyourails/"
+export PATH=$PATH:"/Users/renanmuniz/Library/Android/sdk/build-tools/23.0.3"
+
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/renanmuniz/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,3 +101,8 @@ export REDTAMARIN_SDK=~/sdk/redtamarin
 
 
 export TERM="xterm-256color"
+
+. ~/torch/install/bin/torch-activate
+
+# redefine prompt_context for hiding user@hostname
+prompt_context () { }
